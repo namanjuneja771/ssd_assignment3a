@@ -9,7 +9,7 @@ for i in data.keys():
 	for j in range(len(data[i])):
 		dictionary1[data[i][j]["name"]]=[data[i][j]["parent"]]
 		dictionary1[data[i][j]["name"]].extend(dictionary1[data[i][j]["parent"]])
-emp1,emp2=map(int,input().split())
+emp1,emp2=map(str,input().split())
 if(emp1==data["L0"][0]["name"] or emp2==data["L0"][0]["name"]):
 	print("not found")
 else:

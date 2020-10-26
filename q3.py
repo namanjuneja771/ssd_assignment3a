@@ -31,6 +31,8 @@ for i in range(0,len(list1),2):
 	list3.append(60*int(list1[i+1][:list1[i+1].index(":")])+int(list1[i+1][list1[i+1].index(":")+1:list1[i+1].index(":")+3]))
 at1+=last
 list3.extend(list4)
+if(at1[0]==","):
+	at1=at1[1:]
 at1="["+at1+"]"
 f=open("employee2.txt",'r')
 str2=f.readline()
@@ -65,6 +67,9 @@ for i in range(0,len(list2),2):
 	list5.append(60*int(list2[i+1][:list2[i+1].index(":")])+int(list2[i+1][list2[i+1].index(":")+1:list2[i+1].index(":")+3]))
 at2+=last
 list5.extend(list6)
+if(at2[0]==","):
+	at2=at2[1:]
+
 at2="["+at2+"]"
 hour=float(input())
 req=int(hour*60)
@@ -107,11 +112,11 @@ while(i<len(list7) and j<len(list8)):
 	if(list7[i+1]>list8[j+1]):
 		j+=2
 	else:
-		i+=2				
+		i+=2	
 f1=open("output.txt","w")
 f1.write("Available slot\n")
-f1.write("Employee 1:[{0}]\n".format(at1))
-f1.write("Employee 2:[{0}]\n".format(at2))
+f1.write("Employee 1:{0}\n".format(at1))
+f1.write("Employee 2:{0}\n".format(at2))
 f1.write("Slot duration: {0} hours\n".format(hour))
 if(start!=-1 and date1==date2):
 	f1.write("{1}'{0}':[".format(date1,"{"))
