@@ -1,3 +1,4 @@
+import sys
 def getdifference(day1,day2,month1,month2,year1,year2):
 	n1=year1*365+day1  
 	for i in range(0,month1-1): 
@@ -12,6 +13,10 @@ def getdifference(day1,day2,month1,month2,year1,year2):
 	if(month2<=2 and (((year2)%4==0 and (year2)%100!=0) or (year2)%400==0)):
 		n2-=1  
 	return abs(n2-n1)
+flg1=0
+if(len(sys.argv)==2 and (sys.argv[1][0]=="M" or sys.argv[1][0]=="m")):
+	flg1=1
+
 f=open("date_calculator.txt",'r')
 str1=f.readline()
 str2=f.readline()
@@ -75,6 +80,9 @@ elif("-" in str1):
 elif("/" in str1):
 	str1=str1.strip("/")
 	month1=int(str1)
+elif("." in str1):
+	str1=str1.strip(".")
+	month1=int(str1)
 if("Jan" in str2):
 	month2=1
 elif("Feb" in str2):
@@ -109,6 +117,9 @@ elif("." in str2):
 	str2=str2.strip(".")
 	month2=int(str2)
 monthDays=[31,28,31,30,31,30,31,31,30,31,30,31]
+if(flg1==1):
+	month1,day1=day1,month1
+	month2,day2=day2,month2
 diff=getdifference(day1,day2,month1,month2,year1,year2)
 f1=open("output.txt","w")
 f1.write("Day Difference: {0} Day".format(diff))
