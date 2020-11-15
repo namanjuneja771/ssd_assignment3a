@@ -1,10 +1,13 @@
-# Question 1
-## The parent list of first employee is stored and a `while loop` is used to check if the selected common leader is present in list of parent of all the other employees. Changes have been made from line number `21` to wnd of that while loop.
+# Assignment 3(c)
+## Question 1
+### The whole program was broken into functions namely(findparent,p,check,main) to increase modularity and reusability.
+![Screenshot from 2020-11-13 22-02-29](https://user-images.githubusercontent.com/70585990/99096819-c4e10680-25fc-11eb-9975-61ad30b183b5.png)
 
-# Question 2
-## The first character of the command line argument is checked and if it is 'm' or 'M' then flag bit set to 1. If the flag bit is 1 then month and day are swapped. Only an extra `flag bit` and `command line input` are the changes made in this code.
+## Question 2
+### The whole program was broken into functions namely(leapyear,ncal,getdifference,daycal,yearcal,monthcal4,monthcal3,monthcal2,monthcal1,main) to increase modularity and reusability.
+![Screenshot from 2020-11-13 22-02-44](https://user-images.githubusercontent.com/70585990/99097008-007bd080-25fd-11eb-818e-a1082f56c4ff.png)
 
-# Question 3
-## The `os` library is used to get all the Employee files in the present working directory. A while loop is used to convert all employee available slots to mins. Another while loop is used for finding all common available slots (of duration greater than the required duration) of first and last employee list and then remove them and append the resultant list in a `list of list` (line number 60).
-
-# Git Repository link: https://github.com/namanjuneja771/ssd_assignment3a/tree/PartB
+## Question 3
+### The whole program was broken into functions namely(fetchfiles,avlslots,timeinmins,cmmon,compute,pr,main) to increase modularity and reusability.
+![Screenshot from 2020-11-13 22-03-00](https://user-images.githubusercontent.com/70585990/99097058-14bfcd80-25fd-11eb-9366-13e0ef175c36.png)
+github-link:https://github.com/namanjuneja771/ssd_assignment3a/tree/PartC
